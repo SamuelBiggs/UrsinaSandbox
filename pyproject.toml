@@ -1,9 +1,12 @@
 [tool.poetry]
-name = "ursinasandbox"
+name = "sandbox"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 license = "Apache-2.0"
+
+[tool.poetry.scripts]
+sandbox = "sandbox.__main__:app"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -13,6 +16,7 @@ imageio = "^2.9.0"
 "hurry.filesize" = "^0.9"
 docopt = "^0.6.2"
 packbits = "^0.6"
+typer = "^0.3.2"
 
 [tool.poetry.dev-dependencies]
 
