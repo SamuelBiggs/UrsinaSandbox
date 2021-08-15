@@ -16,9 +16,27 @@ import typer
 
 app = typer.Typer()
 
+
 @app.command()
-def start():
-    print("boo")
+def inventory():
+    from . import inventory
+
+    inventory.run()
+
+
+@app.command()
+def example():
+    from . import example
+
+    example.main()
+
+
+@app.command()
+def minecraft():
+    from . import minecraft
+
+    minecraft.main()
+
 
 if __name__ == "__main__":
     app()
