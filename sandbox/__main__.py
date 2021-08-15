@@ -21,7 +21,7 @@ app = typer.Typer()
 def inventory():
     from . import inventory
 
-    inventory.run()
+    inventory.main()
 
 
 @app.command()
@@ -36,6 +36,27 @@ def minecraft():
     from . import minecraft
 
     minecraft.main()
+
+
+@app.command()
+def platformer():
+    from . import platformer
+
+    platformer.main()
+
+
+@app.command()
+def terraria():
+    from . import terraria
+
+    terraria.main()
+
+
+@app.command()
+def clicker():
+    from . import clicker
+
+    clicker.main()
 
 
 if __name__ == "__main__":
