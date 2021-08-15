@@ -18,45 +18,10 @@ app = typer.Typer()
 
 
 @app.command()
-def inventory():
-    from . import inventory
+def start():
+    from . import start
 
-    inventory.main()
-
-
-@app.command()
-def example():
-    from . import example
-
-    example.main()
-
-
-@app.command()
-def minecraft():
-    from . import minecraft
-
-    minecraft.main()
-
-
-@app.command()
-def platformer():
-    from . import platformer
-
-    platformer.main()
-
-
-@app.command()
-def terraria():
-    from . import terraria
-
-    terraria.main()
-
-
-@app.command()
-def clicker():
-    from . import clicker
-
-    clicker.main()
+    start.main()
 
 
 if __name__ == "__main__":
