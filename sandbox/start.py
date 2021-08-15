@@ -12,13 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import typer
+import ursina
 
-app = typer.Typer()
 
-@app.command()
 def start():
-    print("boo")
+    app = ursina.Ursina()
 
-if __name__ == "__main__":
-    app()
+    ground = ursina.Entity(
+        model="cube",
+        color=ursina.color.magenta,
+        z=-0.1,
+        y=-3,
+        origin=(0, 0.5),
+        scale=(50, 1, 10),
+        collider="box",
+    )
+
+    app.run()
