@@ -46,6 +46,26 @@ def main():
         for x in range(-20, 20):
             Voxel(position=(x, 0, z))
 
+    # for y in range(0, 100):
+    #     Voxel(position=(10, y, 10))
+
+    for x in range(-5, 6):
+        for z in [-5, 5]:
+            for y in range(20):
+                if x >= -1 and x <= 1 and y < 5:
+                    continue
+
+                Voxel(position=(x, y, z))
+
+    for x in [-5, 5]:
+        for z in range(-4, 5):
+            for y in range(20):
+                Voxel(position=(x, y, z))
+
+    for z in range(-5, 6):
+        for x in range(-5, 6):
+            Voxel(position=(x, 20, z))
+
     ursina.prefabs.first_person_controller.FirstPersonController()
 
     app.run()
